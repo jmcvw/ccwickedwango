@@ -4,6 +4,7 @@ Version: 0.0.0.9000
 Authors@R: c(
     person("John", "Wilson", , "john.wilson@codeclan.com", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0003-2344-6155")),
+    person("David", "Currie", email = "david.currie@codeclan.com", role = "aut")
     person("First", "Last", , "e-mail@example.com", role = c("aut"),
            comment = c(ORCID = "0000-0000-0000-0000"))
   )
