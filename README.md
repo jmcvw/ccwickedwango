@@ -1,7 +1,13 @@
-# CC Wicked Wango
 
 <!-- DO NOT EDIT THE README.md FILE DIRECTLY. -->
 <!-- INSTEAD EDIT README.qmd -->
+
+# CC Wicked Wango
+
+<img src="man/figures/ww-hex.png" align="right" height="138" />
+
+![CodeClan](man/figures/cc-badge.svg)
+![WickedWango](man/figures/ww-badge.svg)
 
 An R package to be filled with loads of functions that will be useful
 for teaching on CodeClan data analysis courses.
@@ -13,11 +19,13 @@ And for improving our R / general dev skills.
   - anything that eases our marking workflow.
   - anything that helps you personally,
   - or anything that might be more generally helpful.
+  - anything that can automate any repeated tasks.
 
 ## Proposed style guide
 
 Everything here is up for discussion, and can be changed on an ongoing
-basis.
+basis. Add to it anything you think is a good idea. Remove anything you
+don’t (except the last point below).
 
 - Let’s use the native R pipe `|>`(?) where possible.
 - Let’s commit to fully documenting any functions we contribute to the

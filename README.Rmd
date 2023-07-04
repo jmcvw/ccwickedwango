@@ -1,10 +1,16 @@
 ---
-title: "CC Wicked Wango"
-format: gfm
+output: github_document
 ---
 
 <!-- DO NOT EDIT THE README.md FILE DIRECTLY. -->
 <!-- INSTEAD EDIT README.qmd -->
+
+# CC Wicked Wango
+
+<img src="man/figures/ww-hex.png" align="right" height="138" />
+
+![CodeClan](man/figures/cc-badge.svg)
+![WickedWango](man/figures/ww-badge.svg)
 
 An R package to be filled with loads of functions that will be useful for teaching on CodeClan data analysis courses.
 
