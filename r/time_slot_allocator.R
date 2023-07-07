@@ -13,22 +13,21 @@
 
 time_slot_allocator <- function(students, start_time, time_per_slot){
 
-  library(tidyverse)
   # students <- c("barry", "steve", "margo")
   # time_per_slot <- 15
   # start_time <- 1000
 
   students_rand <- sample(students, size = length(students))
 
-  slots_tibble <- tibble(
+  slots_tibble <- dplyr::tibble(
     students_rand,
     start_time
   ) %>%
-    rowid_to_column("row_num") %>%
-    mutate(
+    dplyr::rowid_to_column("row_num") %>%
+    dplyr::mutate(
       start_time = start_time + ((row_num - 1) * time_per_slot)
     ) %>%
-    select(-row_num)
+    dplyr::select(-row_num)
 
 
 
