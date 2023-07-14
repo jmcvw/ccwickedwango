@@ -6,6 +6,8 @@
 #' @return A character vector
 #' @export
 #'
+#' @param text character string
+#'
 #' @examples
 #' does_al_approve("Pizza is the best food")
 
