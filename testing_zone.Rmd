@@ -1,0 +1,61 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+
+
+
+library(tidyverse)
+students <- c(  "Ali", "Chiara" , "Justyna", "Naomi", "Thijmen", "Tom", "Weezay", "Emma")
+time_per_slot <- 20
+time_for_break_slot <- 10
+start_time <- 1030
+start_time <- as.POSIXct("2023-01-01 10:30:00", tz= "GMT")
+start_time + 10 * 60
+
+students_rand <- c(sample(students, size = length(students)))
+
+break_slot <- ceiling(length(students)/2)
+students_rand <- append(students_rand, "Break", after = break_slot)
+
+slots_tibble <- tibble(
+  student = students_rand,
+  start_time
+) %>%
+  rowid_to_column("row_num") %>%
+  mutate(start_time = case_when(
+    row_num <= break_slot+1 ~ start_time + (row_num-1)*time_per_slot*60,
+    row_num == break_slot+2 ~ start_time + (row_num-2)*time_per_slot*60 + time_for_break_slot*60,
+    .default = start_time + (break_slot*time_per_slot*60) + time_for_break_slot*60 + ((row_num-1)-break_slot) * time_per_slot*60
+    )) %>%
+  select(-row_num)
+
+
+# 
+# slots_tibble <- tibble(
+#   students_rand,
+#   start_time
+# ) %>%
+#   rowid_to_column("row_num") %>%
+#   mutate(
+#     hour = as.integer(str_sub(as.character(start_time), 1,2)),
+#     min = as.integer(str_sub(as.character(start_time), 3,4)),
+#      time_diff = (row_num - 1) * time_per_slot,
+#     min = min + time_diff,
+#     if_else(min >= 60,
+#         min = min %% 60,
+#        # hour = hour + 1})
+#         min = min
+#        # hour = hour}
+#        )
+#         
+#     # start_time = if_else(
+#     #   start_time + time_diff == 
+#   ) %>%
+#   select(-row_num)
+
+slots_tibble
+```
+
