@@ -19,3 +19,23 @@ adder <- function(a, b) {
   a + b
 }
 
+
+#' Title
+#'
+#' iterate ove fun til it works
+#' using load_all() each time for any ad hoc test
+#' when you happy do devtools::document()
+#' iterate over docs til you're happy
+#'
+#' @param a Numeric
+#' @param b Numeric
+#'
+#' @return
+#' @export
+#'
+#' @examples
+product <- function(a, b) {
+  stopifnot('Vector are not the same length' = length(a) == length(b))
+  a * b
+}
+
