@@ -19,7 +19,8 @@ is_it_tidyverse <- function(function_to_check){
   }
 
   tv_packages <- c("ggplot2", "dplyr", "tidyr", "readr",
-                  "purrr", "tibble", "stringr", "forcats"
+                  "purrr", "tibble", "stringr", "forcats",
+                  "lubridate"
   )
 
   # use this for all the modelling functions too
@@ -37,7 +38,7 @@ is_it_tidyverse <- function(function_to_check){
     if (package_found) {break}
     package_string <- paste0("package:", package)
     funs_list <- lsf.str(package_string) # create an object containing all the functions in that package
-
+lsf.str("package:ggplot2")
     n <- length(funs_list)
 
     for (i in 1:n) {
