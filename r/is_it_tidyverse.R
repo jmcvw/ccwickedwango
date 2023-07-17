@@ -12,6 +12,7 @@
 
 is_it_tidyverse <- function(function_to_check){
 
+  # check that tidyverse has been loaded
   if("package:tidyverse" %in% search() == FALSE) {
     print("Tidyverse needs to be loaded")
     break
@@ -22,7 +23,7 @@ is_it_tidyverse <- function(function_to_check){
   )
 
   # use this for all the modelling functions too
-  # all_tv_packages <- c("ggplot2", "dplyr", "tidyr", "readr",
+  # tv_packages <- c("ggplot2", "dplyr", "tidyr", "readr",
   #                      "purrr", "tibble", "stringr", "forcats",
   #                      "modelr", "tune", "parsnip", "yardstick",
   #                     "recipes", "rsample", "tidymodels"
@@ -34,9 +35,8 @@ is_it_tidyverse <- function(function_to_check){
   for (package in tv_packages) {
 
     if (package_found) {break}
-    string <- paste0("package:", package)
-    print(paste0("Trying ", string))
-    funs_list <- lsf.str(string)
+    package_string <- paste0("package:", package)
+    funs_list <- lsf.str(package_string) # create an object containing all the functions in that package
 
     n <- length(funs_list)
 
@@ -46,6 +46,10 @@ is_it_tidyverse <- function(function_to_check){
         package_found = 1
         break
       }
+    }
+    if (i == n && package == tail(tv_packages, 1)){
+      print(paste0("Function is not in the tidyverse."))
+      break
     }
   }
 }
