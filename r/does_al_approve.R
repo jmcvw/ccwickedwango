@@ -17,10 +17,10 @@ does_al_approve <- function(text){
   outcome <- sample(c(1,2), size = 1)
 
   if (outcome == 1){
-    paste0(text, " - Al approves this message.")
+    paste0("'", text, "' - Al approves this message.")
   }
   else {
-    paste0(text, " - Al does not approve this message.")
+    paste0("'", text, "' - Al does not approve this message.")
   }
 
 }
