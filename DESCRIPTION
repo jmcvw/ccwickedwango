@@ -3,7 +3,8 @@ Title: What the Package Does (One Line, Title Case)
 Version: 0.0.0.9000
 Authors@R: c(
     person("John", "Wilson", , "john.wilson@codeclan.com", role = c("aut", "cre")),
-    person("Al", "Morgan", , "alasdair.morgan@codeclan.com", role = c("aut"))
+    person("Al", "Morgan", , "alasdair.morgan@codeclan.com", role = c("aut")),
+    person("Colin", "Scotland", , "colin.scotland@codeclan.com", role = c("aut"))
   )
 Description: What the package does (one paragraph).
 License: MIT + file LICENSE
