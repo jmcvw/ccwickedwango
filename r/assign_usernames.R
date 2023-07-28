@@ -16,10 +16,10 @@ assign_usernames <- function(names_vector){
   stopifnot("Vector contains non-character elements" = is.character(names_vector))
 
 
-  user_df <- dplyr::as_tibble(names_vector) %>%
-    dplyr::rename(name = value) %>%
-    dplyr::rowid_to_column() %>%
-    dplyr::mutate(username = stringr::str_c("user", rowid)) %>%
+  user_df <- dplyr::as_tibble(names_vector) |>
+    dplyr::rename(name = value) |>
+    dplyr::rowid_to_column() |>
+    dplyr::mutate(username = stringr::str_c("user", rowid)) |>
     dplyr::select(-rowid)
 
   clipr::write_clip(user_df)
