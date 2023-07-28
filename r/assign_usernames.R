@@ -23,6 +23,7 @@ assign_usernames <- function(names_vector){
     dplyr::select(-rowid)
 
   clipr::write_clip(user_df)
+  print("username dataframe has been copied to clipboard :)")
   return(user_df)
 
 }
