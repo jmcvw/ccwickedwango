@@ -13,6 +13,8 @@
 
 assign_usernames <- function(names_vector){
   stopifnot("Input is not a vector" = is.vector(names_vector))
+  stopifnot("Vector contains non-character elements" = is.character(names_vector))
+
 
   user_df <- dplyr::as_tibble(names_vector) %>%
     dplyr::rename(name = value) %>%
