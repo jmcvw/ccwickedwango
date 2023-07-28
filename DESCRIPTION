@@ -1,12 +1,12 @@
 Package: ccwickedwango
-Title: What the Package Does (One Line, Title Case)
+Title: The One-Stop Shop for CodeClan Data Instructor Function Needs
 Version: 0.0.0.9000
 Authors@R: c(
     person("John", "Wilson", , "john.wilson@codeclan.com", role = c("aut", "cre")),
     person("Al", "Morgan", , "alasdair.morgan@codeclan.com", role = c("aut")),
     person("Colin", "Scotland", , "colin.scotland@codeclan.com", role = c("aut"))
   )
-Description: What the package does (one paragraph).
+Description: This package does everything a codeclan data dude would ever need.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Language: en
